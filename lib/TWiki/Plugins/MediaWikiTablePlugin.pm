@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# Copyright (C) 2006 Michael Daum http://wikiring.com
+# Copyright (C) 2006-2009 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -17,13 +17,17 @@ package TWiki::Plugins::MediaWikiTablePlugin;
 use strict;
 use vars qw(
   $VERSION $RELEASE $NO_PREFS_IN_TOPIC $SHORTDESCRIPTION
-  $doneHeader $isInitialized
+  $doneHeader $header $isInitialized
 );
 
 $VERSION = '$Rev$';
-$RELEASE = 'v1.01';
+$RELEASE = 'v1.10';
 $NO_PREFS_IN_TOPIC = 1;
 $SHORTDESCRIPTION = 'Format tables the <nop>MediaWiki way';
+
+$header = <<'HERE';
+<link rel="stylesheet" href="%PUBURLPATH%/%SYSTEMWEB%/MediaWikiTablePlugin/style.css" type="text/css" media="all" />
+HERE
 
 ###############################################################################
 sub initPlugin { 
@@ -38,20 +42,13 @@ sub commonTagsHandler {
   handleMWTable($_[2], $_[1], $_[0]) if $_[0] =~ /(^|[\n\r])\s*{\|/;
 
   return if $doneHeader;
-  my $link = 
-    '<link rel="stylesheet" '.
-    'href="%PUBURL%/%SYSTEMWEB%/MediaWikiTablePlugin/style.css" '.
-    'type="text/css" media="all" />';
-  if ($_[0] =~ s/<head>(.*?[\r\n]+)/<head>$1$link\n/o) {
-    $doneHeader = 1;
-  }
+  $doneHeader = 1 if  $_[0] =~ s/<head>(.*?[\r\n]+)/<head>$1$header/o;
 }
 
 ###############################################################################
 sub handleMWTable {
   unless ($isInitialized) {
-    eval 'use TWiki::Plugins::MediaWikiTablePlugin::Core;';
-    die $@ if $@;
+    require TWiki::Plugins::MediaWikiTablePlugin::Core;
     $isInitialized = 1;
   }
   return TWiki::Plugins::MediaWikiTablePlugin::Core::handleMWTable(@_);

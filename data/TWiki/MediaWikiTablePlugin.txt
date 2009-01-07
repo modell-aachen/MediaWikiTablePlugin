@@ -13,7 +13,7 @@
 <table style="float:right">
 <tr>
   <td><img src="%ATTACHURLPATH%/wikiringlogo40x40.png"></td>
-  <td><a href="http://wikiring.de" title="Make your Wiki ring!" style="text-decoration:none">
+  <td><a href="http://wikiring.com" title="Make your Wiki ring!" style="text-decoration:none">
       Powered by <br /> <nop>WikiRing Consultants </a>
   </td>
 </tr>
@@ -21,12 +21,12 @@
 
 This plugin allows to create tables using the 
 [[http://meta.wikimedia.org/wiki/Help:Table][MediaWiki table syntax]]
-and can be used to help porting <nop>MediaWiki content to TWiki as well as
-lower the entry barier of users acustommed to <nop>MediaWiki to also use TWiki.
+and can be used to help porting <nop>MediaWiki content to Foswiki as well as
+lower the entry barier of users acustommed to <nop>MediaWiki to also use Foswiki.
 
 This plugin deliberately does not provide the full <nop>MediaWiki markup syntax
 and only focuses on table markup. 
-TWiki's and <nop>MediaWiki's table markup can't be mapped on each other
+Foswiki's and <nop>MediaWiki's table markup can't be mapped on each other
 as the latter is much more powerful and allows to control the resulting
 HTML markup in much detail.
 
@@ -34,8 +34,8 @@ If you want to enable <nop>MediaWiki wiki markup then
 you might also be interested in the Foswiki:Extensions/EditSyntaxPlugin.
 
 If you want to import content in <nop>MediaWiki format and convert it
-to TWiki markup as much as possible then use the 
-Foswiki:Extensions/MediaWiki2TWikiAddOn (forthcoming).
+to Foswiki markup as much as possible then use the 
+Foswiki:Extensions/MediaWiki2TWikiAddOn.
 
 ---++ Syntax Rules
 The entire *table* is encased with curly brackets and a vertical bar character
@@ -333,7 +333,7 @@ which will generate
 </div>
 
 ---++ Comparison of table syntax
-This is a comparison of the three basic ways to compose tables. The TWiki
+This is a comparison of the three basic ways to compose tables. The Foswiki
 collumn just lists the basic markup capabilities. 
 Note, that there are table plugins to enhance the formatting capabilities,
 i.e. the Foswiki:Extensions/TablePlugin. For the sake of simplicity its features
@@ -346,7 +346,7 @@ is not represented in the markup model.
 <tr>
 <th>&nbsp;</th>
 <th>XHTML</th>
-<th>TWiki</th> 
+<th>Foswiki</th> 
 <th><nop>MediaWiki</th>
 </tr>
 
@@ -776,8 +776,8 @@ right side
 {| border="0"
 |+''A table in a table''
 |-
-| align="center" width="150px" | <img src="%PUBURLPATH%/%SYSTEMWEB%/ProjectLogos/T-logo-65x50-t.gif" alt="TWiki" />
-| align="center" width="150px" | <img src="%PUBURLPATH%/%SYSTEMWEB%/ProjectLogos/T-logo-65x50-t.gif" alt="TWiki" />
+| align="center" width="150px" | <img src="%PUBURLPATH%/%SYSTEMWEB%/ProjectLogos/foswiki-logo-slogan.png" alt="Foswiki" />
+| align="center" width="150px" | <img src="%PUBURLPATH%/%SYSTEMWEB%/ProjectLogos/foswiki-logo-slogan.png" alt="Foswiki" />
 |-
 | align="center" colspan="2" style="border-top:1px solid red; border-right:1px solid red; border-bottom:2px solid red; border-left:1px solid red;" | Two logos
 |}
@@ -1238,17 +1238,18 @@ Wiki markup like <code>_text_</code> instead of "font-style:italic".
    * Unzip ==%TOPIC%.zip== in your twiki installation directory. Content:
      | *File:* | *Description:* |
 %$MANIFEST%
-   * Visit =configure= in your TWiki installation, and enable the plugin in the {Plugins} section.
+   * Visit =configure= in your installation, and enable the plugin in the {Plugins} section.
 
 ---++ Plugin Info
 <!-- provided for compatibility only
    * Set SHORTDESCRIPTION = Format tables the <nop>MediaWiki way
 -->
-|  Plugin Author: | TWiki:Main.MichaelDaum |
-|  Copyright &copy;: | 2006-2008, Michael Daum http://michaeldaumconsulting.com |
+|  Plugin Author: | Michael Daum |
+|  Copyright &copy;: | 2006-2009, Michael Daum http://michaeldaumconsulting.com |
 |  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
-|  Plugin Version: | v1.01 |
+|  Plugin Version: | v1.10 |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  08 Jan 2009: | certified on foswiki/compat |
 |  17 Jul 2008: | fixed some Wikipedia:Mojibake in documentation | 
 |  13 Nov 2007: | minor performance tweaks |
 |  13 Oct 2006: | table markup may start have whitespaces at the beginning of a line |
@@ -1256,11 +1257,7 @@ Wiki markup like <code>_text_</code> instead of "font-style:italic".
 |  CPAN Dependencies: | none |
 |  Other Dependencies: | none |
 |  Perl Version: | 5.8 |
-|  Foswiki:Extensions/Benchmark: | %SYSTEMWEB%.GoodStyle nn%, %SYSTEMWEB%.FormattedSearch nn%, %TOPIC% nn% |
 |  Plugin Home: | Foswiki:Extensions/%TOPIC% |
 |  Feedback: | Foswiki:Extensions/%TOPIC%Dev |
-|  Appraisal: | Foswiki:Extensions/%TOPIC%Appraisal |
-
--- TWiki:Main/MichaelDaum - 17 Jul 2008
 
 %META:FILEATTACHMENT{name="wikiringlogo40x40.png" attachment="wikiringlogo40x40.png" attr="h" comment="" date="1189787359" path="wikiringlogo40x40.png" size="2571" stream="wikiringlogo40x40.png" tmpFilename="" user="ProjectContributor" version="1"}%

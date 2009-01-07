@@ -1,6 +1,6 @@
-# MediaWikiTablePlugin Core
+# Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# Copyright (C) 2006 Michael Daum http://wikiring.com
+# Copyright (C) 2006-2009 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -16,7 +16,7 @@ package TWiki::Plugins::MediaWikiTablePlugin::Core;
 
 use strict;
 
-sub DEBUG {0;} # toggle me
+use constant DEBUG => 0; # toggle me
 
 ###############################################################################
 sub writeDebug {
