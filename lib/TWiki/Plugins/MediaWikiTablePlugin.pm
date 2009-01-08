@@ -21,12 +21,12 @@ use vars qw(
 );
 
 $VERSION = '$Rev$';
-$RELEASE = 'v1.10';
+$RELEASE = 'v1.11';
 $NO_PREFS_IN_TOPIC = 1;
 $SHORTDESCRIPTION = 'Format tables the <nop>MediaWiki way';
 
 $header = <<'HERE';
-<link rel="stylesheet" href="%PUBURLPATH%/%SYSTEMWEB%/MediaWikiTablePlugin/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="%PUBURLPATH%/%TWIKIWEB%/MediaWikiTablePlugin/style.css" type="text/css" media="all" />
 HERE
 
 ###############################################################################

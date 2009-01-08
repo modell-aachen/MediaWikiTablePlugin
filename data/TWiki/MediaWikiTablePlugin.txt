@@ -1233,12 +1233,7 @@ Wiki markup like <code>_text_</code> instead of "font-style:italic".
 
 
 ---++ Plugin Installation Instructions
-
-   * Download the ZIP file
-   * Unzip ==%TOPIC%.zip== in your twiki installation directory. Content:
-     | *File:* | *Description:* |
-%$MANIFEST%
-   * Visit =configure= in your installation, and enable the plugin in the {Plugins} section.
+%$INSTALL_INSTRUCTIONS%
 
 ---++ Plugin Info
 <!-- provided for compatibility only
@@ -1247,7 +1242,7 @@ Wiki markup like <code>_text_</code> instead of "font-style:italic".
 |  Plugin Author: | Michael Daum |
 |  Copyright &copy;: | 2006-2009, Michael Daum http://michaeldaumconsulting.com |
 |  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
-|  Plugin Version: | v1.10 |
+|  Plugin Version: | v1.11 |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
 |  08 Jan 2009: | certified on foswiki/compat |
 |  17 Jul 2008: | fixed some Wikipedia:Mojibake in documentation | 
