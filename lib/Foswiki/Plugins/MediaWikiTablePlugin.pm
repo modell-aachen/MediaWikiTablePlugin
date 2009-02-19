@@ -12,26 +12,25 @@
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-package TWiki::Plugins::MediaWikiTablePlugin;
+package Foswiki::Plugins::MediaWikiTablePlugin;
 
 use strict;
 use vars qw(
   $VERSION $RELEASE $NO_PREFS_IN_TOPIC $SHORTDESCRIPTION
-  $doneHeader $header $isInitialized
+  $doneHeader $header
 );
 
 $VERSION = '$Rev$';
-$RELEASE = 'v1.11';
+$RELEASE = 'v1.20';
 $NO_PREFS_IN_TOPIC = 1;
 $SHORTDESCRIPTION = 'Format tables the <nop>MediaWiki way';
 
 $header = <<'HERE';
-<link rel="stylesheet" href="%PUBURLPATH%/%TWIKIWEB%/MediaWikiTablePlugin/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="%PUBURLPATH%/%SYSTEMWEB%/MediaWikiTablePlugin/style.css" type="text/css" media="all" />
 HERE
 
 ###############################################################################
 sub initPlugin { 
-  $isInitialized = 0;
   $doneHeader = 0;
   return 1; 
 }
@@ -47,11 +46,8 @@ sub commonTagsHandler {
 
 ###############################################################################
 sub handleMWTable {
-  unless ($isInitialized) {
-    require TWiki::Plugins::MediaWikiTablePlugin::Core;
-    $isInitialized = 1;
-  }
-  return TWiki::Plugins::MediaWikiTablePlugin::Core::handleMWTable(@_);
+  require Foswiki::Plugins::MediaWikiTablePlugin::Core;
+  return Foswiki::Plugins::MediaWikiTablePlugin::Core::handleMWTable(@_);
 }
 
 1;

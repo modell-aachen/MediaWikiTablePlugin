@@ -12,7 +12,7 @@
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-package TWiki::Plugins::MediaWikiTablePlugin::Core;
+package Foswiki::Plugins::MediaWikiTablePlugin::Core;
 
 use strict;
 
@@ -20,7 +20,7 @@ use constant DEBUG => 0; # toggle me
 
 ###############################################################################
 sub writeDebug {
-  #&TWiki::Func::writeDebug('- MediaWikiTablePlugin::Core - '.$_[0]) if DEBUG;
+  #&Foswiki::Func::writeDebug('- MediaWikiTablePlugin::Core - '.$_[0]) if DEBUG;
   print STDERR '- MediaWikiTablePlugin::Core - '.$_[0]."\n" if DEBUG;
 }
 

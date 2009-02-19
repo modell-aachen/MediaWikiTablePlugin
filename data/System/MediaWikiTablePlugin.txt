@@ -35,7 +35,7 @@ you might also be interested in the Foswiki:Extensions/EditSyntaxPlugin.
 
 If you want to import content in <nop>MediaWiki format and convert it
 to Foswiki markup as much as possible then use the 
-Foswiki:Extensions/MediaWiki2TWikiAddOn.
+Foswiki:Extensions/MediaWiki2FoswikiAddOn.
 
 ---++ Syntax Rules
 The entire *table* is encased with curly brackets and a vertical bar character
@@ -342,7 +342,7 @@ are not under consideration here.
 The the notion of =n/a= in some cases means that the element under consideration
 is not represented in the markup model.
 
-<table class="twikiTable">
+<table class="foswikiTable">
 <tr>
 <th>&nbsp;</th>
 <th>XHTML</th>
@@ -1242,8 +1242,9 @@ Wiki markup like <code>_text_</code> instead of "font-style:italic".
 |  Plugin Author: | Michael Daum |
 |  Copyright &copy;: | 2006-2009, Michael Daum http://michaeldaumconsulting.com |
 |  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
-|  Plugin Version: | v1.11 |
+|  Plugin Version: | v1.20 |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  19 Feb 2009: | converted to foswiki |
 |  08 Jan 2009: | certified on foswiki/compat |
 |  17 Jul 2008: | fixed some Wikipedia:Mojibake in documentation | 
 |  13 Nov 2007: | minor performance tweaks |
