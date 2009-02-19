@@ -56,8 +56,8 @@ sub _handleTable {
     # tables
     if ($line =~ s/^\s*{\|(.*)$/<table $1>/) { # begin table
       die "second table found" if $foundTable;
-      unless ($line =~ s/(class=[\\"'])/$1mwTable /) {
-	$line =~ s/<table /<table class='mwTable' /;
+      unless ($line =~ s/(class=[\\"'])/$1wikitable /) {
+	$line =~ s/<table /<table class='wikitable' /;
       }
       $foundTable = 1;
     }
