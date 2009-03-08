@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" date="1216281716" format="1.1" version="$Rev$"}%
+%META:TOPICINFO{author="BramVanOosterhout" date="1236428691" format="1.1" reprev="1.3" version="1.3"}%
 <!--
 
    PLEASE DO NOT EDIT THIS TOPIC
@@ -12,7 +12,7 @@
 %TOC%
 <table style="float:right">
 <tr>
-  <td><img src="%ATTACHURLPATH%/wikiringlogo40x40.png"></td>
+  <td><img src="%ATTACHURLPATH%/wikiringlogo40x40.png" alt="wiki ring logo" /></td>
   <td><a href="http://wikiring.com" title="Make your Wiki ring!" style="text-decoration:none">
       Powered by <br /> <nop>WikiRing Consultants </a>
   </td>
@@ -210,7 +210,7 @@ single line. The parameters are optional.
 A table is defined by
 <div class="mwIndent">
 <pre>
- {| <b>params</b>
+ {<nop>| <b>params</b>
  |}
 </pre>
 </div>
@@ -349,7 +349,6 @@ is not represented in the markup model.
 <th>Foswiki</th> 
 <th><nop>MediaWiki</th>
 </tr>
-
 <tr>
 <th>Table</th>
 <td>&lt;table>&lt;/table></td>
@@ -357,37 +356,33 @@ is not represented in the markup model.
 <td>{| <br />
 |}</td>
 </tr>
-
 <tr>
 <th>Caption</th>
 <td>&lt;caption>&lt;/caption></td>
 <td>n/a</td>
 <td>|+ </td>
 </tr>
-
 <tr>
 <th>Row</th>
 <td>&lt;tr>&lt;/tr></td>
 <td>n/a</td>
 <td>|- </td>
 </tr>
-
 <tr>
 <th>Data cell</th>
-<td>&lt;td>cell1&lt;/td><br>&lt;td>cell2&lt;/td></td>
+<td>&lt;td>cell1&lt;/td><br />&lt;td>cell2&lt;/td></td>
 <td>&#124; cell1 &#124; cell2 &#124; cell3 &#124;</td>
 <td>
 | cell1<br />
 | cell2<br />
 | cell1 || cell2 || cell3
 </td>
-
+</tr>
 <tr>
 <th>Header cell</th>
-<td>&lt;th>&lt;/th></th>
+<td>&lt;th>&lt;/th></td>
 <td>&#124; <nop>*cell1* &#124; <nop>*cell2* &#124; <nop>*cell3* &#124;</td>
-<td>! </td>
-
+<td>! </td> </tr>
 <tr>
 <th rowspan="2">Sample table</th>
 <td colspan="3">
@@ -400,8 +395,7 @@ is not represented in the markup model.
       <td>3</td> 
       <td>4</td> 
    </tr>
-</table>
-
+</table></td></tr>
 <tr>
 <td>
 &lt;table><br />
@@ -415,19 +409,16 @@ is not represented in the markup model.
 &nbsp;&lt;/tr><br />
 &lt;/table>
 </td>
-
 <td>
 &#124; 1 &#124; 2 &#124;<br />
 &#124; 3 &#124; 4 &#124;
 </td>
-
 <td>
 <nop>{| <br />
 | 1 || 2<br />
 |- <br />
 | 3 || 4<br />
 |}</td>
-
 </tr></table>
 
 ---++ Examples
@@ -736,7 +727,7 @@ should give you an idea of what is possible, though.
 |-
 | upper left
 | &nbsp;
-| rowspan=2 style="border-bottom:3px solid grey;" valign="top" |
+| rowspan="2" style="border-bottom:3px solid grey;" valign="top" |
 right side
 |-
 | style="border-bottom:3px solid grey;" | lower left
@@ -746,11 +737,10 @@ right side
 {| border="0"
 |+''A table in a table''
 |-
-| align="center" width="150px" | [[Image:wiki.png]]
-| align="center" width="150px" | [[Image:wiki.png]]
+| align="center" width="150px" | <img src="%PUBURLPATH%/%SYSTEMWEB%/ProjectLogos/foswiki-logo-slogan.png" alt="Foswiki" />
+| align="center" width="150px" | <img src="%PUBURLPATH%/%SYSTEMWEB%/ProjectLogos/foswiki-logo-slogan.png" alt="Foswiki" />
 |-
-| align="center" colspan="2" style="border-top:1px solid red; border-right:1px
-          solid red; border-bottom:2px solid red; border-left:1px solid red;" |
+| align="center" colspan="2" style="border-top:1px solid red; border-right:1px; solid red; border-bottom:2px solid red; border-left:1px solid red;" |
 Two logos
 |}
 |}
@@ -766,7 +756,7 @@ Two logos
 |-
 | upper left
 | &nbsp;
-| rowspan=2 style="border-bottom:3px solid grey;" valign="top" |
+| rowspan="2" style="border-bottom:3px solid grey;" valign="top" |
 right side
 |-
 | style="border-bottom:3px solid grey;" | lower left

@@ -50,6 +50,7 @@ sub _handleTable {
   my $foundHead = 0;
   my $foundTable = 0;
   my $foundCaption = 0;
+  my $rowTag = 'oddrow';
 
   foreach my $line (split(/[\n\r]/,$text)) {
   
@@ -71,26 +72,33 @@ sub _handleTable {
     # cells
     if ($line =~ s/^\s*\|([^}\+\-].*)?$/&_handleTableCells($1, 0)/e) {
       unless ($foundRow) {
-	$line = "<tr>".$line;
+	$line = "<tr class=\"$rowTag\">".$line;
 	$foundRow = 1;
+	$rowTag = ($rowTag eq 'oddrow') ? 'evenrow' : 'oddrow'; 
       }
       if ($foundCaption) {
 	$line = "</caption>".$line;
 	$foundCaption = 0;
       }
-      $line = "</td>\n$line" if $foundCell;
+      if ($foundCell) {
+	$line = "</td>".$line;
+	$foundCell = 0;
+      } elsif ($foundHead) {
+	$line = "</th>".$line;
+	$foundHead = 0;
+      }
       $foundCell = 1;
     }
 
     # head
     if ($line =~ s/^\s*!([^}\+\-].*)$/&_handleTableCells($1, 1)/e) {
-      if ($foundCaption) {
-	$line = "</caption>".$line;
-	$foundCaption = 0;
-      }
       unless ($foundRow) {
 	$line = "<tr>".$line;
 	$foundRow = 1;
+      }
+      if ($foundCaption) {
+	$line = "</caption>".$line;
+	$foundCaption = 0;
       }
       $line = "</th>\n$line" if $foundHead;
       $foundHead = 1;
@@ -114,10 +122,16 @@ sub _handleTable {
 
     # rows
     if ($line =~ s/^\s*\|-+(.*)$/<tr $1>/) { # begin row
+      unless ($line =~ s/(class=[\\"'])/$1$rowTag /) {
+	$line =~ s/<tr /<tr class=\"$rowTag\" /;
+      } 
       if ($foundCaption) {
 	$line = "</caption>".$line;
 	$foundCaption = 0;
       }
+      $line = "</tr>\n".$line if $foundRow;
+      $foundRow = 1;
+      $rowTag = ($rowTag eq 'oddrow') ? 'evenrow' : 'oddrow'; 
       if ($foundCell) {
 	$line = "</td>".$line;
 	$foundCell = 0;
@@ -125,8 +139,6 @@ sub _handleTable {
 	$line = "</th>".$line;
 	$foundHead = 0;
       }
-      $line = "</tr>\n".$line if $foundRow;
-      $foundRow = 1;
     }
 
     #writeDebug("line=$line");
