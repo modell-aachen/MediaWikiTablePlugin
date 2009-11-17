@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BramVanOosterhout" date="1236428691" format="1.1" reprev="1.3" version="1.3"}%
+%META:TOPICINFO{author="ProjectContributor" date="1236428691" format="1.1" reprev="1.3" version="1.3"}%
 <!--
 
    PLEASE DO NOT EDIT THIS TOPIC
@@ -1232,7 +1232,8 @@ Wiki markup like <code>_text_</code> instead of "font-style:italic".
 |  Plugin Author: | Michael Daum |
 |  Copyright &copy;: | 2006-2009, Michael Daum http://michaeldaumconsulting.com |
 |  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
-|  Plugin Version: | v1.20 |
+|  Release: | %$RELEASE% |
+|  Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
 |  19 Feb 2009: | converted to foswiki |
 |  08 Jan 2009: | certified on foswiki/compat |
@@ -1244,6 +1245,6 @@ Wiki markup like <code>_text_</code> instead of "font-style:italic".
 |  Other Dependencies: | none |
 |  Perl Version: | 5.8 |
 |  Plugin Home: | Foswiki:Extensions/%TOPIC% |
-|  Feedback: | Foswiki:Extensions/%TOPIC%Dev |
+|  Support: | Foswiki:Development/%TOPIC% |
 
 %META:FILEATTACHMENT{name="wikiringlogo40x40.png" attachment="wikiringlogo40x40.png" attr="h" comment="" date="1189787359" path="wikiringlogo40x40.png" size="2571" stream="wikiringlogo40x40.png" tmpFilename="" user="ProjectContributor" version="1"}%
