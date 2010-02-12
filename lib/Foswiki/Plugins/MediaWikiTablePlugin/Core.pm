@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# Copyright (C) 2006-2009 Michael Daum http://michaeldaumconsulting.com
+# Copyright (C) 2006-2010 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -15,13 +15,21 @@
 package Foswiki::Plugins::MediaWikiTablePlugin::Core;
 
 use strict;
-
+use Foswiki::Func ();
 use constant DEBUG => 0; # toggle me
 
 ###############################################################################
 sub writeDebug {
   #&Foswiki::Func::writeDebug('- MediaWikiTablePlugin::Core - '.$_[0]) if DEBUG;
   print STDERR '- MediaWikiTablePlugin::Core - '.$_[0]."\n" if DEBUG;
+}
+
+###############################################################################
+sub init {
+  Foswiki::Func::addToZone('head', 'MEDIAWIKITABLEPLUGIN:CSS', <<'HERE');
+<link rel="stylesheet" href="%PUBURLPATH%/%SYSTEMWEB%/MediaWikiTablePlugin/style.css" type="text/css" media="all" />
+HERE
+  }
 }
 
 ###############################################################################

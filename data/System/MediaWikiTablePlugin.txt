@@ -1230,11 +1230,12 @@ Wiki markup like <code>_text_</code> instead of "font-style:italic".
    * Set SHORTDESCRIPTION = Format tables the <nop>MediaWiki way
 -->
 |  Plugin Author: | Michael Daum |
-|  Copyright &copy;: | 2006-2009, Michael Daum http://michaeldaumconsulting.com |
+|  Copyright &copy;: | 2006-2010, Michael Daum http://michaeldaumconsulting.com |
 |  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
 |  Release: | %$RELEASE% |
 |  Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  12 Feb 2010: | using Foswiki:Extensions/ZonePlugin to add css to the page; shipping minified and gziped css now |
 |  19 Feb 2009: | converted to foswiki |
 |  08 Jan 2009: | certified on foswiki/compat |
 |  17 Jul 2008: | fixed some Wikipedia:Mojibake in documentation | 
