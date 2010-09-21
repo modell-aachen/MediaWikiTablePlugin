@@ -1046,7 +1046,9 @@ Some users have created CSS classes and templates
 to make table styles easier.  Instead of remembering table parameters, you just
 include an appropriate style class after the =={|==.  This helps keep
 table formatting consistent, and can allow a single change to the class to fix
-a problem or enhance the look of all the tables that are using it at once.  For
+a problem or enhance the look of all the tables that are using it at once.  
+
+For
 instance, this:
 
 <div class="mwIndent"><verbatim>
@@ -1141,7 +1143,7 @@ becomes this:
 </div>
 
 simply by replacing inline CSS for the table by <code>class="wikitable"</code>.
-This is because the _wikitable_ class in the plugin's =style.css= file contains a
+This is because the _wikitable_ class in the plugin's =styles.css= file contains a
 number of _wikitable_ CSS style rules.  These are all applied
 at once when you mark a table with the class.  You can then add additional
 style rules if desired.  These override the class's rules, allowing you to use
@@ -1235,7 +1237,9 @@ Wiki markup like <code>_text_</code> instead of "font-style:italic".
 |  Release: | %$RELEASE% |
 |  Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  21 Sep 2010: | fixed adding css to the page (gawd) |
 |  12 Feb 2010: | using Foswiki:Extensions/ZonePlugin to add css to the page; shipping minified and gziped css now |
+|  08 Mar 2009: | added evenrow/oddrow to tables Foswiki:Main/BramVanOosterhout |
 |  19 Feb 2009: | converted to foswiki |
 |  08 Jan 2009: | certified on foswiki/compat |
 |  17 Jul 2008: | fixed some Wikipedia:Mojibake in documentation | 

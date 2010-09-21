@@ -17,7 +17,7 @@ package Foswiki::Plugins::MediaWikiTablePlugin;
 use strict;
 use Foswiki::Func ();
 our $VERSION = '$Rev$';
-our $RELEASE = 'v1.21';
+our $RELEASE = 'v1.30';
 our $NO_PREFS_IN_TOPIC = 1;
 our $SHORTDESCRIPTION = 'Format tables the <nop>MediaWiki way';
 our $doneInit = 0;
