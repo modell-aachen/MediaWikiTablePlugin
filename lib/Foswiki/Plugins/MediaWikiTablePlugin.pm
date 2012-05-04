@@ -16,41 +16,40 @@ package Foswiki::Plugins::MediaWikiTablePlugin;
 
 use strict;
 use Foswiki::Func ();
-our $VERSION = '$Rev$';
-our $RELEASE = '1.31';
+our $VERSION           = '$Rev$';
+our $RELEASE           = '1.31';
 our $NO_PREFS_IN_TOPIC = 1;
-our $SHORTDESCRIPTION = 'Format tables the <nop>MediaWiki way';
-our $doneInit = 0;
+our $SHORTDESCRIPTION  = 'Format tables the <nop>MediaWiki way';
+our $doneInit          = 0;
 
 ###############################################################################
-sub initPlugin { 
-  $doneInit = 0;
-  return 1; 
+sub initPlugin {
+    $doneInit = 0;
+    return 1;
 }
 
 ###############################################################################
 sub preRenderingHandler {
-  handleMWTable($_[0]) if $_[0] =~ /(^|[\n\r])\s*{\|/;
+    handleMWTable( $_[0] ) if $_[0] =~ /(^|[\n\r])\s*{\|/;
 }
 
 ###############################################################################
 sub init {
 
-  return if $doneInit;
-  $doneInit = 1;
+    return if $doneInit;
+    $doneInit = 1;
 
-  require Foswiki::Plugins::MediaWikiTablePlugin::Core;
-  Foswiki::Func::addToZone('head', 'MEDIAWIKITABLEPLUGIN:CSS', <<'HERE');
+    require Foswiki::Plugins::MediaWikiTablePlugin::Core;
+    Foswiki::Func::addToZone( 'head', 'MEDIAWIKITABLEPLUGIN:CSS', <<'HERE');
 <link rel="stylesheet" href="%PUBURLPATH%/%SYSTEMWEB%/MediaWikiTablePlugin/styles.css" type="text/css" media="all" />
 HERE
 
 }
 
-
 ###############################################################################
 sub handleMWTable {
-  init();
-  return Foswiki::Plugins::MediaWikiTablePlugin::Core::handleMWTable(@_);
+    init();
+    return Foswiki::Plugins::MediaWikiTablePlugin::Core::handleMWTable(@_);
 }
 
 1;
