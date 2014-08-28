@@ -1,0 +1,10 @@
+*.gz
+*.swp
+pub/System/MediaWikiTablePlugin/styles.css
+MediaWikiTablePlugin.md5
+MediaWikiTablePlugin.sha1
+MediaWikiTablePlugin.tgz
+MediaWikiTablePlugin.txt
+MediaWikiTablePlugin.zip
+MediaWikiTablePlugin_installer
+MediaWikiTablePlugin_installer.pl

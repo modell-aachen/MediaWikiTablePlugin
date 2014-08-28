@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# Copyright (C) 2006-2010 Michael Daum http://michaeldaumconsulting.com
+# Copyright (C) 2006-2014 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -15,9 +15,11 @@
 package Foswiki::Plugins::MediaWikiTablePlugin;
 
 use strict;
+use warnings;
+
 use Foswiki::Func ();
-our $VERSION = '$Rev$';
-our $RELEASE = '1.31';
+our $VERSION = '1.32';
+our $RELEASE = '1.32';
 our $NO_PREFS_IN_TOPIC = 1;
 our $SHORTDESCRIPTION = 'Format tables the <nop>MediaWiki way';
 our $doneInit = 0;
